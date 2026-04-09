@@ -1,0 +1,24 @@
+[2026-04-09T17:28:54Z] === ENRICH ITERATION 1 START | repo=pgvector/pgvector-python sha=2968f258 ===
+[2026-04-09T17:28:54Z] [iter=1] PHASE START: enrich repo=pgvector/pgvector-python sha=2968f258 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/2968f258-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/2968f258f9486531bd1340cbda4ff8fcaf06cdc1.nq.gz
+[2026-04-09T17:29:04Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=77 MB
+[2026-04-09T17:29:06Z] [iter=1] AST store loaded triples=262527 load_secs=2 mem_mb=455 MB
+[2026-04-09T17:29:06Z] [iter=1] Step 2: Finding LSP targets mem_mb=455 MB
+[2026-04-09T17:29:07Z] [iter=1] LSP targets found call_sites=2915 imports=203 extends=54 implements=0 secs=1
+[2026-04-09T17:29:08Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=455 MB
+[2026-04-09T17:29:09Z] [iter=1] Position index built positions=16558 nodes_with_types=22085 secs=1 mem_mb=455 MB
+[2026-04-09T17:29:09Z] [iter=1] Step 3: Starting LSP resolution mem_mb=455 MB already_completed_types=[] already_completed_files=0
+[2026-04-09T17:29:09Z] [iter=1] Resolving target type target_type=call_site count=2915
+[2026-04-09T17:29:40Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.8 files_done=1 resolved=16 errors=280 current=tests/test_bit.py
+[2026-04-09T17:30:27Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.5 files_done=4 resolved=86 errors=736 current=examples/colpali/exact.py
+[2026-04-09T17:31:07Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.2 files_done=13 resolved=155 errors=1128 current=tests/test_psycopg.py
+[2026-04-09T17:31:38Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.7 files_done=22 resolved=286 errors=1415 current=pgvector/sqlalchemy/sparsevec.py
+[2026-04-09T17:32:44Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.8 files_done=26 resolved=304 errors=1486 current=tests/test_half_vector.py
+[2026-04-09T17:33:15Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.3 files_done=46 resolved=450 errors=1789 current=pgvector/psycopg/register.py
+[2026-04-09T17:33:25Z] [iter=1] Target type resolved target_type=call_site resolved=502 errors=1890 secs=257 mem_mb=455 MB
+[2026-04-09T17:33:25Z] [iter=1] Resolving target type target_type=import_statement count=203
+[2026-04-09T17:33:27Z] [iter=1] Target type resolved target_type=import_statement resolved=116 errors=0 secs=2 mem_mb=455 MB
+[2026-04-09T17:33:27Z] [iter=1] Resolving target type target_type=extends_clause count=54
+[2026-04-09T17:33:29Z] [iter=1] Target type resolved target_type=extends_clause resolved=32 errors=0 secs=1 mem_mb=455 MB
+[2026-04-09T17:33:53Z] [iter=1] Step 5: Writing final enrichment file triples=23660
+[2026-04-09T17:33:53Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/2968f258f9486531bd1340cbda4ff8fcaf06cdc1.nq.gz size_kb=464
+[2026-04-09T17:33:53Z] [iter=1] PHASE END: enrich elapsed_s=299 elapsed_min=5.0 total_triples=23660
